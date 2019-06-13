@@ -56,8 +56,10 @@
         @change="handleChange"
         v-bind:defaultValue="people_count"
       ></CustomInput>
-      <CustomButton text="vypočítaj poistenie" @click="calculateInsurance"></CustomButton>
-      <div v-if="result !== ''">
+      <div class="btn-calc">
+        <CustomButton text="vypočítaj poistenie" @click="calculateInsurance"></CustomButton>
+      </div>
+      <div class="resultContainer" v-if="result !== ''">
         <span>výsledok</span>
         <span class="result">{{result}} €</span>
       </div>
@@ -213,6 +215,7 @@ lo #app {
   border-radius: 10px;
   outline: none;
   width: 100%;
+  background: white;
 }
 
 .main > div {
@@ -221,6 +224,7 @@ lo #app {
 
 .error {
   color: red;
+  font-weight: 600;
 }
 
 .result {
@@ -237,5 +241,23 @@ lo #app {
 
 .ui.selection.dropdown {
   width: 100%;
+}
+
+.btn-calc {
+  display: flex;
+  justify-content: center;
+}
+
+.resultContainer {
+  text-align: center;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+body {
+  padding: 0px;
+  background-image: linear-gradient(#abb6f4, #05d99f);
 }
 </style>

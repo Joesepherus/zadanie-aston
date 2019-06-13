@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="example">
-    <span><span class="required">*</span>{{label}}</span>
+    <p><span class="required">*</span>{{label}}</p>
     <datepicker v-model="date" v-bind:placeholder="placeholder"></datepicker>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div class="input">
     <p><span class="required">*</span>{{placeholder}}</p>
     <sui-input 
       v-bind:placeholder="placeholder" 
@@ -28,3 +28,9 @@ export default {
   }
 };
 </script>
+
+<style>
+.input {
+  width: 100%;
+}
+</style>
